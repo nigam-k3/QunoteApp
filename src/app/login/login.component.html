@@ -1,0 +1,56 @@
+<main>
+  <div>
+
+    <!-- form Heading -->
+    <div>
+      <h1 class="heading">Sign in</h1>
+    </div>
+    <!-- form start -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSUbmit()">
+      <!-- email -->
+      <div>
+        <div class="emailInput">
+          <input type="text" placeholder="Email address" formControlName="email">
+        </div>
+        <!-- email validations -->
+        <div class="valiEmail" *ngIf="loginForm.get('email').errors && loginForm.get('email').dirty">
+          <span class="help-block" *ngIf="loginForm.get('email').errors['required']">Email is
+            required</span>
+          <span class="help-block"
+            *ngIf="(!loginForm.get('email').errors['email'] || loginForm.get('email').invalid['email'] ) && loginForm.get('email').value">Email
+            must be a valid email address</span>
+        </div>
+      </div>
+      <!-- password -->
+      <div class="emailInput">
+        <div>
+          <input type="text" placeholder="Password" formControlName="password">
+        </div>
+        <!-- password validations -->
+        <div class="valipass" *ngIf="loginForm.get('password').errors && loginForm.get('password').dirty">
+          <span class="help-block" *ngIf="loginForm.get('password').errors['required']">Password is
+            required</span>
+          <span class="help-block" *ngIf="loginForm.get('password').errors['minlength']">Password
+            must be at least 8 characters long</span>
+        </div>
+        <!-- <span class="help-block" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">password
+          is required</span> -->
+      </div>
+      <!-- button -->
+      <div class="btn">
+        <button class="btn btn-secondary btn-block submit" type="submit" [disabled]="!loginForm.valid"><span
+            *ngIf="loading" class="spinner-border spinner-border-sm mr-1" routerLink="loader"></span>Sign in</button>
+        <a routerLink="forgetpass">Forgotten your password</a>
+      </div>
+    </form>
+    <!-- registration link -->
+    <div>
+      <div class="regiLinkBox">
+        <h2>Not using Qunote yet?</h2>
+        <div class="btn1">
+          <button routerLink="register" class="btn btn-primary">Register for a free trail</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

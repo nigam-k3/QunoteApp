@@ -1,0 +1,224 @@
+h1 {
+  font-size: 42px;
+  font-weight: 400;
+  font-family: "Roboto Slab",serif;
+  color: #282f39;
+  line-height: 1.24;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+.mainContainer{
+  background-color: white;
+  margin-top: -150px;
+  padding-top: 100px;
+  margin-bottom: -200px;
+  padding-bottom: 180px;
+}
+.btn-primary{
+  margin-left: 1100px;
+  background-color: #8bcd13;
+  border-color: #8bcd13;
+  color: #282f39;
+  display: inline-block;
+    margin-bottom: 5px;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font: inherit;
+    line-height: 1.42857143;
+    border-radius: 5px!important;
+}
+.accordion{
+  margin-top: 80px;
+  margin-left: 120px;
+  margin-right: 120px;
+
+}
+.accordionTab{
+display: grid;
+row-gap: 25px;
+}
+.right-col {
+  float: right;
+  width: 50%;
+  position: relative;
+  bottom: 30px;
+  right: 50px;
+}
+.right-col1 {
+  float: right;
+  width: 50%;
+  position: relative;
+  bottom: 30px;
+  right: 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.left-col{
+  width: 500px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 100px;
+}
+.left-col1{
+  width: 200px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+.textArea{
+  padding-bottom: 25px!important;
+  width: 550px;
+  min-height: 40px;
+  height: 37px;
+    overflow: hidden;
+    padding: 8px 10px!important;
+    resize: both!important;
+    background: #fff;
+    transition: border-color .2s;
+    outline: 0!important;
+    font-size: 14px!important;
+    border: 1px solid #ccc!important;
+    border-radius: 5px!important;
+}
+.text2{
+  width: 550px;
+  border: 1px solid #ccc!important;
+  border-radius: 5px;
+}
+.right-col2{
+margin-left: 325px;
+margin-top: 35px;
+}
+.input-row2{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.icons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 15px;
+  background-color: white;
+  padding: 5px;
+  margin-top: -12px;
+}
+.iconslist{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 15px;
+  background-color: white;
+  margin-left: 30px;
+  padding: 5px;
+  margin-top: -12px;
+}
+hr {
+ margin-top: 60px;
+}
+.radioButtons{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 40px;
+  position: relative;
+  left: 180px;
+}
+.radiosbtn{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-right: 300px;
+}
+
+label{
+  margin-left: 5px;
+}
+.radioButtons1{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 30px;
+  /* position: relative;
+  left: 110px; */
+}
+.left-col3{
+  width: 200px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.rdBtn{
+  position: relative;
+  right: 100px;
+}
+.btns{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 70px;
+  column-gap: 20px;
+}
+.btn-secondary{
+  border-radius: 5px;
+  /* background-color: #eee; */
+  background-color: #8bcd13;;
+    color: #282f39;
+    border-color: #eee;
+    display: inline-block;
+    margin-bottom: 5px;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font: inherit;
+    line-height: 1.42857143;
+    border-radius: 5px!important;
+}
+.btn-secondary:disabled{
+  background-color: #eee;
+}
+.btn-secondary:hover{
+  background-color: transparent;
+  border-color: black;
+}
+.cancelBtn{
+  position: relative;
+  left: 550px;
+}
+.logo1 {
+  width:250px;
+  height: 64px;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+.abc{
+  margin-top: 2%;
+  margin-left: 38%;
+  color: #838383;
+}
+.xyz{
+  margin-left: 30%;
+  color: #838383;
+}
+.saveBtns{
+  position: relative;
+  left: 0px;
+}
+.hamburger{
+  margin-left: 1200px;
+  margin-top: 30px;
+  color: black;
+}
+.logo {
+  width:300px;
+  height: 77.41px;
+  margin-left: 40%;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+.hamburger{
+  margin-left: 1200px;
+  margin-top: 30px;
+  color: black;
+}

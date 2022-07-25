@@ -1,0 +1,45 @@
+<main>
+  <div class="hamburger">
+    <button type="button" pButton pRipple icon="pi pi-bars"
+      [style]="{'height' : '48px',    'border-radius': '90px' , 'background-color': '#8bcd13'}"
+      (click)="menu.toggle($event)"></button>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+  </div>
+  <div>
+    <h1>Tasks</h1>
+  </div>
+  <div>
+    <button class="btn btn-primary" routerLink="/addTasks">Add task</button>
+  </div>
+  <div class="accordion">
+    <p-accordion [multiple]="!multiples">
+      <div class="accordionTab">
+        <div>
+          <p-accordionTab header="Tasks ({{resData.length}})" [selected]="true">
+            <p-table responsiveLayout="scroll" [value]="resData.reverse()">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Title</th>
+                  <th>Due date</th>
+                  <th>Notify me of completion</th>
+                  <th></th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-resData id="parent">
+                <tr>
+                  <td>{{resData.title}}</td>
+                  <td>{{resData.dueTime | date:'dd/MM/yy, h:mm a'}}</td>
+                  <td>
+                    <div *ngIf="resData.notifyMe=='1'">Yes</div>
+                    <div *ngIf="resData.notifyMe=='0'">No</div>
+                  </td>
+                  <td><button class="btn" (click)="viewDetails(resData.id)">View</button></td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </p-accordionTab>
+        </div>
+      </div>
+    </p-accordion>
+  </div>
+</main>

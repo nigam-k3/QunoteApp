@@ -1,0 +1,82 @@
+<main>
+  <div>
+    <div class="hamburger">
+      <button type="button" pButton pRipple icon="pi pi-bars"
+        [style]="{'height' : '48px',    'border-radius': '90px' , 'background-color': '#8bcd13'}"
+        (click)="menu.toggle($event)"></button>
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </div>
+    <!-- <app-loader></app-loader> -->
+    <div>
+      <h1>My profile</h1>
+      <h2>Admin area</h2>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="onsubmit()">
+      <div class="input-row">
+        <div class="left-col">
+          <label>First Name</label>
+          <input type="text" formControlName="firstName" />
+        </div>
+        <div class="right-col">
+          <label>Last name</label>
+          <input type="text" formControlName="lastName" />
+        </div>
+        <div class="left-col">
+          <label>Job title</label>
+          <input type="text" formControlName="jobTitle" />
+        </div>
+        <div class="right-col">
+          <label>Email address</label>
+          <input type="text" formControlName="email" />
+        </div>
+        <div class="left-col">
+          <label>Telephone number</label>
+          <input type="text" formControlName="telephone" />
+        </div>
+        <div class="right-col">
+          <label>Qunote email address</label>
+          <input type="text" formControlName="qunoteEmail" />
+        </div>
+
+      </div>
+      <p>If you wish to change any of this information, please contact your system administrator</p>
+      <h2>Login credentials</h2>
+      <div class="input-row">
+        <div class="left-col">
+          <label>Password</label>
+          <input type="password" placeholder="New Password" formControlName="password" pPassword />
+          <span class="help-block"
+            *ngIf="profileForm.get('password').invalid && profileForm.get('password').touched">Password is
+            required</span>
+          <!-- <span *ngIf="profileForm.get('password').getError['required']!=null">Password is required</span> -->
+        </div>
+        <div class="right-col">
+          <label>Confirm Password</label>
+          <input type="password" placeholder="Confirm New Password" formControlName="conpassword" />
+          <span class="help-block"
+            *ngIf="profileForm.get('conpassword').invalid && profileForm.get('conpassword').touched">Confirm
+            password
+            is required</span>
+          <!-- <span *ngIf="profileForm.get('conpassword').getError['required']!=null">Confirm password is required</span>
+          <span *ngIf="profileForm.get('conpassword').getError['Mustmatch']!=null">Password is mismatch</span> -->
+        </div>
+      </div>
+      <h2>Display format</h2>
+      <div class="dropdown">
+        <label>Name Format</label>
+        <select class="dropdownList" formControlName="dropdown">
+          <option value="1">John Doe</option>
+          <option value="2">J,Doe</option>
+          <option value="3">Doe,John</option>
+          <option value="4">Doe,J</option>
+          <option value="5">John D</option>
+        </select>
+      </div>
+      <p>This will change the way names are displayed for you within the system</p>
+      <div class="btn">
+        <button class="btn btn-primary" routerLink="/" type="button">Cancel</button>
+        <button class="btn btn-secondary" type="submit" routerLink="loader/loadedComp">Save</button>
+      </div>
+    </form>
+  </div>
+</main>

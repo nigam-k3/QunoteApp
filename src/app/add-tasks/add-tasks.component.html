@@ -1,0 +1,98 @@
+<div class="mainContainer">
+  <div class="hamburger">
+    <button type="button" pButton pRipple icon="pi pi-bars"
+      [style]="{'height' : '48px',    'border-radius': '90px' , 'background-color': '#8bcd13'}"
+      (click)="menu.toggle($event)"></button>
+    <p-menu #menu [popup]="true" [model]="items"></p-menu>
+  </div>
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <div>
+      <h1>Add task</h1>
+    </div>
+    <div class=" input-row">
+      <div class="left-col">
+        Title*
+      </div>
+      <div class="right-col">
+        <textarea name="" id="" cols="30" rows="10" class="textArea" placeholder="Add task title here"
+          formControlName="title"></textarea>
+      </div>
+    </div>
+    <div class="input-row1">
+      <div class="left-col1">
+        Due*
+      </div>
+      <div class="right-col1">
+        <p-calendar [style]="{'height': '37px'}" placeholder="Date" formControlName="dueDate">
+        </p-calendar>
+        <!-- <p-calendar [(ngModel)]="value1" [style]="{'height': '37px'}" [showTime]="true" hourFormat="12"
+          placeholder="Time" formControlName="due_time"></p-calendar> -->
+        <p-calendar [timeOnly]="true" inputId="timeonly" placeholder="Time" formControlName="dueTime"></p-calendar>
+      </div>
+    </div>
+    <div class="input-row2">
+      <div class="left-col1">
+        Details
+      </div>
+      <div class="right-col2">
+        <p-editor [(ngModel)]="text2" [style]="{'height':'200px', 'width': '550px'}" formControlName="detail">
+          <ng-template pTemplate="header">
+            <span class="ql-formats">
+              <button type="button" class="ql-bold" aria-label="Bold"></button>
+              <button type="button" class="ql-italic" aria-label="Italic"></button>
+              <button type="button" class="ql-underline" aria-label="Underline"></button>
+            </span>
+          </ng-template>
+        </p-editor>
+      </div>
+    </div>
+    <hr>
+    <div class="input-row1">
+      <div class="left-col1">
+        Task field
+      </div>
+      <div class="right-col1">
+        <p-dropdown [options]="arr" [style]="{ 'width': '550px'}" formControlName="taskField"></p-dropdown>
+      </div>
+    </div>
+    <div class="radiosbtn">
+      <div class="left-col1">
+        Both field
+      </div>
+      <div class="radioButtons">
+        <div class="">
+          <input type="radio" value="1" formControlName="bothField">
+          <label>Yes</label>
+        </div>
+        <div class="">
+          <input type="radio" value="0" formControlName="bothField">
+          <label>No</label>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="radiosbtn">
+      <div class="left-col3">
+        Notify me of completion
+      </div>
+      <div class="radioButtons1">
+        <div class="">
+          <input type="radio" value="1" formControlName="notifyMe">
+          <label>Yes</label>
+        </div>
+        <div class="rdBtn">
+          <input type="radio" value="0" formControlName="notifyMe">
+          <label>No</label>
+        </div>
+      </div>
+    </div>
+    <div class="btns">
+      <div class="cancelBtn">
+        <input type="button" class="btn btn-secondary" routerLink="/addTask" value="Cancel Task">
+      </div>
+      <div class="saveBtns">
+        <input type="submit" class="btn btn-secondary" value="Save Task  " [disabled]="!taskForm.valid">
+      </div>
+    </div>
+  </form>
+</div>

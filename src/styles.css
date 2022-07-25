@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+
+.main-container{
+  background-color:#ededee;
+
+}
+body{
+  background-color:#ededee;
+  margin: 0;
+}
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+  color: white;
+}
+.p-accordion .p-accordion-header .p-accordion-header-link {
+  background: #333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.p-accordion-tab{
+  touch-action: none;
+}
+
+.p-accordion-header-text {
+    line-height: 1;
+    color: white;
+}
+
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
+  background: #333;
+  border-color: #333;
+  color: white;
+}
+
+
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight:hover .p-accordion-header-link{
+  background: #333;
+}
+.p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover .p-accordion-header-link {
+  background-color: #333;
+}
+.p-accordion .p-accordion-header .p-accordion-header-link .p-accordion-toggle-icon {
+  margin-right: 0.5rem;
+  left: 95%;
+  position: absolute;
+}
+
+.p-inputtext {
+  margin: 0;
+  margin-top: -5px;
+  font-size: 14px;
+}
+
+.p-accordion-header-text {
+  line-height: 1;
+  font-weight: 600;
+  font-size: 24px;
+}
+.p-button-label {
+background-color: #ddd ;
+border-radius: 30px;
+margin-top: 30px;
+border-radius: 20px;
+padding: 10px 20px;
+font-size: 18px;
+color: black;
+}
+/* .button{
+    padding: 10px 20px;
+    color: #282f39;
+    font-size: 18px;
+    outline: 0;
+    margin-right: 10px;
+    border-radius: 30px!important;
+    background: #ddd;
+    border: 1px solid transparent;
+  } */
+
+  .inp[_ngcontent-pur-c61] {
+    padding-left: 25px;
+    padding-right: 0px;
+}
+
+/* .currency[_ngcontent-ust-c61] {
+  position: relative;
+  left: -185px;
+  top: -28px;
+} */
+
+/* .ngcontent-cvu-c61{
+position: relative;
+left: 40px;
+}
+._ngcontent-nct-c61{
+  position: relative;
+  bottom: 28px;
+  right: 10px;
+} */
+/* html{
+  background-color: white;
+} */
+/* .btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  width: 75px;
+} */
+
+.pi-bars {
+  font-size: 1rem;
+  margin-left: 40px;
+  color: black;
+}

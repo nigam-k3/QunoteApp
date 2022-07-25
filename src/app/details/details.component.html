@@ -1,0 +1,72 @@
+<div class="mainBox">
+  <div>
+    <h1>Tasks details</h1>
+  </div>
+  <div class="btns">
+    <div>
+      <button class="btn btn-primary" (click)="navigateTo()">Back to list</button>
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="navigateToEditTask(id)">Edit task </button>
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="detletedTask(id)">Delete task </button>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Title</p>
+    </div>
+    <div class="detailsData">
+      <p [innerHtml]="DetailsData?.title"></p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Due date</p>
+    </div>
+    <div class="detailsData1">
+      <p>{{DetailsData?.dueDate | date:'dd/MM/yy'}}</p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Due time</p>
+    </div>
+    <div class="detailsData2">
+      <p>{{DetailsData?.dueTime | date:'h:mm a'}}</p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Detail</p>
+    </div>
+    <div class="detailsData3">
+      <p>{{DetailsData?.detail}}</p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Task Field</p>
+    </div>
+    <div class="detailsData4">
+      <p>{{DetailsData?.taskField}}</p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Both field</p>
+    </div>
+    <div class="detailsData5">
+      <p>{{DetailsData?.bothField}}</p>
+    </div>
+  </div>
+  <div class="fields">
+    <div>
+      <p>Noify me</p>
+    </div>
+    <div class="detailsData5">
+      <p>{{DetailsData?.notifyMe}}</p>
+    </div>
+  </div>
+</div>
